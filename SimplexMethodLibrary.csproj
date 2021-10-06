@@ -2,6 +2,12 @@
 
   <PropertyGroup>
     <TargetFramework>net5.0</TargetFramework>
+    <PackageId>SimplexMethodLibrary</PackageId>
+    <Authors>IASGroup</Authors>
+    <Description>Solving the optimization problem by the simplex method</Description>
+    <PackageTags>simplex method optimization problem</PackageTags>
+    <PackageProjectUrl>https://github.com/19-IAS-aid-S/SimplexMethodLibrary</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/19-IAS-aid-S/SimplexMethodLibrary</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
   </PropertyGroup>
-
 </Project>

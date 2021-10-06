@@ -1,8 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using SimplexMethodLibrary.Components.Helpers;
 
-namespace SimplexMethodLibrary
+namespace SimplexMethodLibrary.Components
 {
     public class Table
     {

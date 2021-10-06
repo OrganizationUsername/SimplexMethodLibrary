@@ -1,4 +1,6 @@
-﻿namespace SimplexMethodLibrary
+﻿using SimplexMethodLibrary.Components;
+
+namespace SimplexMethodLibrary
 {
     public class SimplexMethodTask
     {

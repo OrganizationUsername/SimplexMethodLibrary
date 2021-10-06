@@ -1,21 +1,22 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
+using SimplexMethodLibrary.Components.Helpers;
 
-namespace SimplexMethodLibrary
+namespace SimplexMethodLibrary.Components
 {
-    public class TargetFunction
+    public class Limit
     {
         #region Properties
         public List<double> Coeffs { get; private set; }
         public double B { get { return Coeffs.Last(); } }
-        public Target Target { get; set; }
+        public Sign Sign { get; set; }
         #endregion
 
-        #region Constructors
-        public TargetFunction(List<double> coeffs, Target target)
+        #region Contructors
+        public Limit(List<double> coeffs, Sign sign)
         {
             Coeffs = coeffs;
-            Target = target;
+            Sign = sign;
         }
         #endregion
     }

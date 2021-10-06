@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace SimplexMethodLibrary
+namespace SimplexMethodLibrary.Components
 {
     public class SystemOfLimits
     {
