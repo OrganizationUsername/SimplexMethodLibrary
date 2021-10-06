@@ -1,4 +1,4 @@
-﻿namespace SimplexMethodLibrary.Components.Helpers
+﻿namespace SimplexMethodLibrary
 {
     public enum CheckStatus
     {
