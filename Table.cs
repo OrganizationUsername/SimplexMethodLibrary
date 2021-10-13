@@ -163,7 +163,7 @@ namespace SimplexMethodLibrary
             return CheckStatus.HaveSolution;
         }
 
-        public double? Calculation()
+        public SimplexMethodTaskResult Calculation()
         {
             CheckStatus validity_status = ValidityCheck(out int row_index, out int column_index);
             switch (validity_status)
@@ -175,16 +175,17 @@ namespace SimplexMethodLibrary
                         {
                             case CheckStatus.Complete:
                                 {
-                                    List<double> bases = Enumerable.Range(1, TargetFunction.Coeffs.Count - 1).Select(Convert.ToDouble).ToList();
-                                    for (int i = 0; i < bases.Count; i++)
+                                    List<double> arguments = Enumerable.Range(1, TargetFunction.Coeffs.Count - 1).Select(Convert.ToDouble).ToList();
+                                    for (int i = 0; i < arguments.Count; i++)
                                     {
-                                        if (Base.Contains((int)bases[i]))
+                                        if (Base.Contains((int)arguments[i]))
                                         {
-                                            bases[i] = Body[Base.ToList().IndexOf((int)bases[i]) + 1, Body.GetLength(1) - 1];
+                                            arguments[i] = Body[Base.ToList().IndexOf((int)arguments[i]) + 1, Body.GetLength(1) - 1];
                                         }
-                                        else bases[i] = 0;
+                                        else arguments[i] = 0;
                                     }
-                                    return bases.Zip(TargetFunction.Coeffs, (argument, coefficient) => argument * coefficient).Sum() + TargetFunction.B;
+
+                                    return new SimplexMethodTaskResult(arguments.Zip(TargetFunction.Coeffs, (argument, coefficient) => argument * coefficient).Sum() + TargetFunction.B, arguments);
                                 }
                             case CheckStatus.HaveSolution:
                                 {
