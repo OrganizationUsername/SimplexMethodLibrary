@@ -18,7 +18,7 @@
         #endregion
 
         #region Methods
-        public double? Calculation()
+        public SimplexMethodTaskResult Calculation()
         {
             return Table.Calculation();
         }
