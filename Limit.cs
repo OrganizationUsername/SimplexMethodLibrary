@@ -6,7 +6,7 @@ namespace SimplexMethodLibrary
     public class Limit
     {
         #region Properties
-        public List<double> Coeffs { get; set; }
+        public List<double> Coeffs { get; private set; }
         public double B { get { return Coeffs.Last(); } }
         public Sign Sign { get; set; }
         #endregion
