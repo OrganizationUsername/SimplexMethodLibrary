@@ -58,11 +58,6 @@ namespace SimplexMethodLibrary
                         Body[row_index, column_index] = SystemOfLimits.Limits[row_index - 1].Coeffs[column_index];
                     }
                 }
-                if (current_limit.Sign == Sign.MoreThan)
-                {
-                    current_limit.Sign = Sign.LessThen;
-                    current_limit.Coeffs = current_limit.Coeffs.Select(coef => -coef).ToList();
-                }
             }
         }
 
